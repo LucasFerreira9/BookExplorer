@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">BookExplorer</string>
+    <string name="search_placeholder">Buscar Livro</string>
+    <string name="authors">Autores: </string>
+    <string name="description_imagem_do_livro">Imagem do livro</string>
+    <string name="fab_add_book">fab add book</string>
+    <string name="data_de_lancamento">Data de lançamento:</string>
+    <string name="descricao">Descrição</string>
+    <string name="favorites">Favoritos</string>
+    <string name="download_pdf">Baixar PDF</string>
+    <string name="read_more">Ver mais</string>
+    <string name="see_more">ver mais</string>
+    <string name="see_less">ver menos</string>
+    <string name="unavailable">indisponível</string>
+</resources>
