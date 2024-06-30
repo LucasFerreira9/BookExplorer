@@ -17,8 +17,8 @@ import com.example.bookexplorer.R;
 import com.example.bookexplorer.book.Book;
 import com.example.bookexplorer.database.BookExplorerDatabase;
 import com.example.bookexplorer.repository.BookRepository;
-import com.example.bookexplorer.viewmodel.BookViewModel.BookVisualizerViewModel;
-import com.example.bookexplorer.viewmodel.BookViewModel.BookVisualizerViewModelFactory;
+import com.example.bookexplorer.viewmodel.BookVisualizerViewModel.BookVisualizerViewModel;
+import com.example.bookexplorer.viewmodel.BookVisualizerViewModel.BookVisualizerViewModelFactory;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class BookVisualizerActivity extends AppCompatActivity {

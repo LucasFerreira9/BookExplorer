@@ -1,4 +1,4 @@
-package com.example.bookexplorer.viewmodel.BookViewModel;
+package com.example.bookexplorer.viewmodel.BookVisualizerViewModel;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;

@@ -1,4 +1,4 @@
-package com.example.bookexplorer.viewmodel.BookViewModel;
+package com.example.bookexplorer.viewmodel.BookVisualizerViewModel;
 
 import androidx.annotation.NonNull;
 import androidx.lifecycle.ViewModel;

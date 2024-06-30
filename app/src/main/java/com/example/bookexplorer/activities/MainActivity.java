@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,9 +21,11 @@ import com.example.bookexplorer.book.Book;
 import com.example.bookexplorer.database.BookExplorerDatabase;
 import com.example.bookexplorer.repository.BookRepository;
 import com.example.bookexplorer.util.Image;
-import com.example.bookexplorer.viewmodel.BooksViewModel.MainActivityViewModel;
-import com.example.bookexplorer.viewmodel.BooksViewModel.MainActivityViewModelFactory;
+import com.example.bookexplorer.viewmodel.MainActivityViewModel.MainActivityViewModel;
+import com.example.bookexplorer.viewmodel.MainActivityViewModel.MainActivityViewModelFactory;
 import com.google.android.material.search.SearchView;
+
+import java.util.List;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -57,9 +60,19 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void addSearchBooksObserver(){
-        mainActivityViewModel.getSearchBooks().observe(this,(searchBooks)->{
-            if(searchBooks!=null) resultListAdapter.updateBooks(searchBooks);
+        mainActivityViewModel.getSearchBooks().observe(this,(bookSearchResource)->{
+            if(bookSearchResource!=null) {
+                List<Book> result = bookSearchResource.getResult();
+                if(result != null)
+                    resultListAdapter.updateBooks(result);
+                else
+                    showErrorToast(bookSearchResource.getErrorMessage());
+            };
         });
+    }
+
+    private void showErrorToast(String error){
+        Toast.makeText(this, error, Toast.LENGTH_SHORT).show();
     }
 
     private void configureAdapters(){
