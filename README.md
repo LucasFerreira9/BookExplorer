@@ -4,6 +4,7 @@ This project brings together common features and challenges in Android applicati
 
 * External API search
 * CRUD of data in an internal database
+* MVVM Architecture pattern
 * Efficient results listing 
 * Intuitive interface in line with UI design patterns
 
@@ -20,9 +21,18 @@ Combined with the repository design pattern, the following architecture recommen
 
 ![](https://miro.medium.com/v2/resize:fit:720/format:webp/1*-yY0l4XD3kLcZz0rO1sfRA.png)
 
-* **ROOM** TODO
-* **okHttp** TODO
-* **gson** TODO 
+* **ROOM** <br>
+
+Provides an abstraction layer on top of Android's standard SQLite for persistent, structured data saving.
+
+* **okHttp** <br>
+
+provides an efficient and practical way to perform HTTP communications
+
+* **gson**  <br>
+* 
+A parsing library to deserialize and serialize data in JSON format.
+
 
 # Build Instructions
 
